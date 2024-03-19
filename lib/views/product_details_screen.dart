@@ -1,3 +1,4 @@
+import 'package:app_mania/common_widgets.dart';
 import 'package:app_mania/utils/global_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -277,6 +278,7 @@ class _ProductDetails extends State<ProductDetails> {
                 ),
               ),
             ),
+            primaryButton(context, title: 'Add To Cart', screen: '/third'),
             Align(
               alignment: Alignment.topCenter,
               child: Container(

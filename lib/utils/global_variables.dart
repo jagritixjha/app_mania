@@ -16,6 +16,6 @@ List<Map<String, dynamic>> category = [
   {"text": "For You", "bgc": bgc, "fgc": fgc},
   {"text": "Dessert", "bgc": bgc, "fgc": fgc},
 ];
-
+int quantity = 1;
 Color fgc = Colors.black87;
 Color bgc = Colors.grey.shade200;
