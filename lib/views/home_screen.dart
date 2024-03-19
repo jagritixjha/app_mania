@@ -128,11 +128,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: category.map((e) {
-                      return InkWell(
+                      return GestureDetector(
                         onTap: () {
                           setState(() {
-                            bgc = Colors.lightGreen.shade500;
-                            fgc = Colors.white;
+                            e['bgc'] = Colors.lightGreen.shade500;
+                            e['fgc'] = Colors.white;
                           });
                         },
                         child: Container(

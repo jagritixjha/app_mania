@@ -72,182 +72,158 @@ class _ProductDetails extends State<ProductDetails> {
                     topRight: Radius.circular(34),
                   ),
                 ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 124,
-                        margin: const EdgeInsets.only(top: 150, bottom: 40),
-                        decoration: BoxDecoration(
-                          color: Colors.lightGreen.shade500,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                if (quantity > 1) {
-                                  setState(() {
-                                    quantity--;
-                                  });
-                                }
-                              },
-                              icon: const Icon(
-                                Icons.remove,
-                                color: Colors.white,
-                                size: 24,
-                              ),
-                            ),
-                            Text(
-                              '$quantity',
-                              style: const TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white),
-                            ),
-                            IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  quantity++;
-                                });
-                              },
-                              icon: const Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 24,
-                              ),
-                            ),
-                          ],
-                        ),
+                child: Column(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 124,
+                      margin: const EdgeInsets.only(top: 150, bottom: 40),
+                      decoration: BoxDecoration(
+                        color: Colors.lightGreen.shade500,
+                        borderRadius: BorderRadius.circular(50),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            'Avocado salad',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w700,
-                              color: Colors.black,
-                              fontSize: 28,
+                          IconButton(
+                            onPressed: () {
+                              if (quantity > 1) {
+                                setState(() {
+                                  quantity--;
+                                });
+                              }
+                            },
+                            icon: const Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                              size: 24,
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          Text(
+                            '$quantity',
+                            style: const TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           ),
-                          Text.rich(
-                            TextSpan(
-                              text:
-                                  'Green cabbage is round and compact with tightly packed smooth leaves and a mild flavor. Feel free to mix in other types of cabbage...',
-                              style: TextStyle(
-                                color: Colors.grey.shade500,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: ' Read More',
-                                  style: TextStyle(
-                                    color: Colors.lightGreen.shade400,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 14,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 26,
-                          ),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '⭐ 4.5',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              Text(
-                                '🔥 100 Kcal',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              Text(
-                                '⏰ 5-10 Min',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18,
-                                ),
-                              )
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          const Text(
-                            'Ingredients',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: ingredients.map(
-                                (e) {
-                                  return Container(
-                                    width: 60,
-                                    height: 60,
-                                    margin: const EdgeInsets.only(right: 12),
-                                    padding: const EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey.shade100,
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: Image.asset(e),
-                                  );
-                                },
-                              ).toList(),
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Navigator.pushNamed(context, '/third'),
-                            child: Container(
-                              height: 60,
-                              width: MediaQuery.of(context).size.width,
-                              alignment: Alignment.center,
-                              margin: const EdgeInsets.only(top: 20),
-                              decoration: BoxDecoration(
-                                color: Colors.lightGreen.shade500,
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: const Text(
-                                'Add To Cart',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white),
-                              ),
+                          IconButton(
+                            onPressed: () {
+                              setState(() {
+                                quantity++;
+                              });
+                            },
+                            icon: const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 24,
                             ),
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Avocado salad',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                            fontSize: 28,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text.rich(
+                          TextSpan(
+                            text:
+                                'Green cabbage is round and compact with tightly packed smooth leaves and a mild flavor. Feel free to mix in other types of cabbage...',
+                            style: TextStyle(
+                              color: Colors.grey.shade500,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: ' Read More',
+                                style: TextStyle(
+                                  color: Colors.lightGreen.shade400,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 26,
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '⭐ 4.5',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                              ),
+                            ),
+                            Text(
+                              '🔥 100 Kcal',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                              ),
+                            ),
+                            Text(
+                              '⏰ 5-10 Min',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Ingredients',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: ingredients.map(
+                              (e) {
+                                return Container(
+                                  width: 60,
+                                  height: 60,
+                                  margin: const EdgeInsets.only(right: 12),
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey.shade100,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Image.asset(e),
+                                );
+                              },
+                            ).toList(),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
-
             /*Container(
               height: 250,
               margin: const EdgeInsets.only(top: 60),
@@ -272,6 +248,35 @@ class _ProductDetails extends State<ProductDetails> {
                 ),
               ),
             ),*/
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: InkWell(
+                onTap: () => Navigator.pushNamed(context, '/third'),
+                child: Container(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width,
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(
+                    top: 20,
+                    bottom: 12,
+                    left: 16,
+                    right: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.lightGreen.shade500,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: const Text(
+                    'Add To Cart',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
             Align(
               alignment: Alignment.topCenter,
               child: Container(
