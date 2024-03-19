@@ -1,3 +1,4 @@
+import 'package:app_mania/utils/global_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -114,38 +115,49 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       TextSpan(text: 'Find '),
                       TextSpan(
-                          text: ' 5km >',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.deepOrangeAccent)),
+                        text: ' 5km >',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.deepOrangeAccent),
+                      ),
                     ],
                   ),
                 ), // heading
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 110,
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.fromLTRB(0, 20, 5, 20),
-                        decoration: BoxDecoration(
-                          color: Colors.lightGreen.shade500,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: const Text(
-                          'Salads',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 16,
+                    children: category.map((e) {
+                      return InkWell(
+                        onTap: () {
+                          setState(() {
+                            bgc = Colors.lightGreen.shade500;
+                            fgc = Colors.white;
+                          });
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 110,
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.fromLTRB(0, 20, 5, 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            color: e['bgc'],
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Text(
+                            e['text'],
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: e['fgc'],
+                              fontSize: 16,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
+                      );
+                    }).toList(),
+
+                    /* Container(
                         height: 40,
                         width: 110,
                         alignment: Alignment.center,
@@ -224,8 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 16,
                           ),
                         ),
-                      ),
-                    ],
+                      ),*/
                   ),
                 ),
                 const SizedBox(

@@ -134,6 +134,9 @@ class _ProductDetails extends State<ProductDetails> {
                               fontSize: 28,
                             ),
                           ),
+                          const SizedBox(
+                            height: 10,
+                          ),
                           Text.rich(
                             TextSpan(
                               text:
@@ -220,19 +223,22 @@ class _ProductDetails extends State<ProductDetails> {
                           InkWell(
                             onTap: () => Navigator.pushNamed(context, '/third'),
                             child: Container(
-                                height: 50,
-                                width: MediaQuery.of(context).size.width,
-                                alignment: Alignment.center,
-                                margin: const EdgeInsets.only(top: 40),
-                                decoration: BoxDecoration(
-                                  color: Colors.lightGreen.shade500,
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: const Text('Add To Cart',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white))),
+                              height: 60,
+                              width: MediaQuery.of(context).size.width,
+                              alignment: Alignment.center,
+                              margin: const EdgeInsets.only(top: 20),
+                              decoration: BoxDecoration(
+                                color: Colors.lightGreen.shade500,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: const Text(
+                                'Add To Cart',
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white),
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -241,6 +247,7 @@ class _ProductDetails extends State<ProductDetails> {
                 ),
               ),
             ),
+
             /*Container(
               height: 250,
               margin: const EdgeInsets.only(top: 60),
