@@ -65,7 +65,7 @@ Container foodCard() {
     height: 110,
     width: double.infinity,
     padding: const EdgeInsets.symmetric(horizontal: 4),
-    margin: EdgeInsets.only(bottom: 12),
+    margin: const EdgeInsets.only(bottom: 12),
     decoration: BoxDecoration(
       color: const Color(0xFFfffefe),
       borderRadius: const BorderRadius.all(Radius.circular(24)),
