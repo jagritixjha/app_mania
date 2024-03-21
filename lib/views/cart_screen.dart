@@ -1,4 +1,5 @@
-import 'package:app_mania/common_widgets.dart';
+import 'package:app_mania/utils/common_widgets.dart';
+import 'package:app_mania/utils/global_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -68,9 +69,45 @@ class _CartScreen extends State<CartScreen> {
                   padding: const EdgeInsets.only(top: 40, right: 16, left: 16),
                   child: Column(
                     children: [
-                      foodCard(),
-                      foodCard(),
-                      foodCard(),
+                      foodCard(onPressed1: () {
+                        if (quantity > 1) {
+                          setState(() {
+                            quantity--;
+                          });
+                        }
+                      }, onPressed2: () {
+                        if (quantity >= 1) {
+                          setState(() {
+                            quantity++;
+                          });
+                        }
+                      }),
+                      foodCard(onPressed1: () {
+                        if (quantity > 1) {
+                          setState(() {
+                            quantity--;
+                          });
+                        }
+                      }, onPressed2: () {
+                        if (quantity >= 1) {
+                          setState(() {
+                            quantity++;
+                          });
+                        }
+                      }),
+                      foodCard(onPressed1: () {
+                        if (quantity > 1) {
+                          setState(() {
+                            quantity--;
+                          });
+                        }
+                      }, onPressed2: () {
+                        if (quantity >= 1) {
+                          setState(() {
+                            quantity++;
+                          });
+                        }
+                      }),
                       Container(
                         height: 70,
                         width: double.infinity,

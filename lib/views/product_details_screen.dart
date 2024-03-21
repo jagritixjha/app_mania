@@ -1,4 +1,4 @@
-import 'package:app_mania/common_widgets.dart';
+import 'package:app_mania/utils/common_widgets.dart';
 import 'package:app_mania/utils/global_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

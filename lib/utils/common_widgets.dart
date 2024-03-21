@@ -60,7 +60,9 @@ Container billCard({required String title, required String price}) {
   );
 }
 
-Container foodCard() {
+Container foodCard(
+    {required void Function()? onPressed1,
+    required void Function()? onPressed2}) {
   return Container(
     height: 110,
     width: double.infinity,
@@ -123,13 +125,7 @@ Container foodCard() {
                   constraints: BoxConstraints.loose(
                     const Size(28, 28),
                   ),
-                  onPressed: () {
-                    if (quantity > 1) {
-                      setState(() {
-                        quantity--;
-                      });
-                    }
-                  },
+                  onPressed: onPressed1,
                   icon: const Icon(
                     Icons.remove,
                     color: Colors.white,
@@ -152,11 +148,7 @@ Container foodCard() {
                   constraints: BoxConstraints.loose(
                     const Size(28, 28),
                   ),
-                  onPressed: () {
-                    setState(() {
-                      quantity++;
-                    });
-                  },
+                  onPressed: onPressed2,
                   icon: const Icon(
                     Icons.add,
                     color: Colors.white,
