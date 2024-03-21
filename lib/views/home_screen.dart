@@ -242,447 +242,147 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 10,
                 ), // scrollable buttons
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/second',
-                            arguments: "assets/plate1.png");
-                        /*
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                ProductDetails(imgSrc: "assets/plate1.png"),
-                          ),
-                        );
-                        */
-                      },
-                      child: Container(
-                        width: 164,
-                        height: 234,
-                        padding: const EdgeInsets.only(top: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.grey.shade200,
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 120,
-                                  width: 120,
-                                  padding:
-                                      const EdgeInsets.fromLTRB(20, 0, 0, 10),
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle),
-                                  child: Image.asset(
-                                    "assets/plate1.png",
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                const Align(
-                                  alignment: Alignment.topRight,
-                                  child: Icon(
-                                    CupertinoIcons.heart,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const Text(
-                              'Avocado salad',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 18,
-                                letterSpacing: 0,
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                const Text(
-                                  '20 min',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey),
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star_border_rounded,
-                                      color: Colors.yellow.shade700,
-                                    ),
-                                    const SizedBox(width: 2),
-                                    const Text(
-                                      '4.5',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.grey),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            const SizedBox(height: 16),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 20),
-                                  child: Text(
-                                    '\$12.00',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18,
-                                      letterSpacing: 0,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height: 38,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.lightGreen.shade500,
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(18),
-                                      bottomRight: Radius.circular(20),
-                                    ),
-                                  ),
-                                  child: const Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 164,
-                      height: 234,
-                      padding: const EdgeInsets.only(top: 10),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 120,
-                                width: 120,
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 0, 0, 10),
-                                decoration:
-                                    const BoxDecoration(shape: BoxShape.circle),
-                                child: Image.asset(
-                                  "assets/plate1.png",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const Align(
-                                alignment: Alignment.topRight,
-                                child: Icon(
-                                  CupertinoIcons.heart,
-                                  weight: 20,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const Text(
-                            'Avocado salad',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                              letterSpacing: 0,
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const Text(
-                                '20 min',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_border_rounded,
-                                    color: Colors.yellow.shade700,
-                                  ),
-                                  const SizedBox(width: 2),
-                                  const Text(
-                                    '4.5',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          const SizedBox(height: 16),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Text(
-                                  '\$12.00',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    letterSpacing: 0,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: 38,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightGreen.shade500,
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(18),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                                child: const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    foodCard(),
+                    foodCard(),
                   ],
                 ), // cards row 1
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 164,
-                      height: 234,
-                      padding: const EdgeInsets.only(top: 10),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 120,
-                                width: 120,
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 0, 0, 10),
-                                decoration:
-                                    const BoxDecoration(shape: BoxShape.circle),
-                                child: Image.asset(
-                                  "assets/plate1.png",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const Align(
-                                  alignment: Alignment.topRight,
-                                  child: Icon(Icons.heart_broken)),
-                            ],
-                          ),
-                          const Text(
-                            'Avocado salad',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                              letterSpacing: 0,
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const Text(
-                                '20 min',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_border_rounded,
-                                    color: Colors.yellow.shade700,
-                                  ),
-                                  const SizedBox(width: 2),
-                                  const Text(
-                                    '4.5',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          const SizedBox(height: 16),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Text(
-                                  '\$12.00',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    letterSpacing: 0,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: 38,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightGreen.shade500,
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(18),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                                child: const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 164,
-                      height: 234,
-                      padding: const EdgeInsets.only(top: 10),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 120,
-                                width: 120,
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 0, 0, 10),
-                                decoration:
-                                    const BoxDecoration(shape: BoxShape.circle),
-                                child: Image.asset(
-                                  "assets/plate1.png",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              const Align(
-                                  alignment: Alignment.topRight,
-                                  child: Icon(Icons.heart_broken)),
-                            ],
-                          ),
-                          const Text(
-                            'Avocado salad',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                              letterSpacing: 0,
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const Text(
-                                '20 min',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star_border_rounded,
-                                    color: Colors.yellow.shade700,
-                                  ),
-                                  const SizedBox(width: 2),
-                                  const Text(
-                                    '4.5',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          const SizedBox(height: 16),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Text(
-                                  '\$12.00',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 18,
-                                    letterSpacing: 0,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: 38,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.lightGreen.shade500,
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(18),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                                child: const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    foodCard(),
+                    foodCard(),
                   ],
                 ), // cards row 2
-                const SizedBox(
-                  height: 20,
-                ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class foodCard extends StatelessWidget {
+  const foodCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/second', arguments: "assets/plate1.png");
+        /*
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                ProductDetails(imgSrc: "assets/plate1.png"),
+          ),
+        );
+        */
+      },
+      child: Container(
+        width: 164,
+        height: 234,
+        padding: const EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(bottom: 20),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 120,
+                  width: 120,
+                  padding: const EdgeInsets.fromLTRB(20, 0, 0, 10),
+                  decoration: const BoxDecoration(shape: BoxShape.circle),
+                  child: Image.asset(
+                    "assets/plate1.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(
+                    CupertinoIcons.heart,
+                  ),
+                ),
+              ],
+            ),
+            const Text(
+              'Avocado salad',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                letterSpacing: 0,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Text(
+                  '20 min',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500, color: Colors.grey),
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.star_border_rounded,
+                      color: Colors.yellow.shade700,
+                    ),
+                    const SizedBox(width: 2),
+                    const Text(
+                      '4.5',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, color: Colors.grey),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Text(
+                    '\$12.00',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 18,
+                      letterSpacing: 0,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 38,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.lightGreen.shade500,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(18),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
+          ],
         ),
       ),
     );
