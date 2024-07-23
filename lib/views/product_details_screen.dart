@@ -225,30 +225,6 @@ class _ProductDetails extends State<ProductDetails> {
                 ),
               ),
             ),
-            /*Container(
-              height: 250,
-              margin: const EdgeInsets.only(top: 60),
-              width: MediaQuery.of(context).size.width,
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Container(
-                  height: 250,
-                  width: 250,
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 45,
-                          color: Colors.lightGreen,
-                        ),
-                      ],
-                      image: DecorationImage(
-                          image: AssetImage("assets/plate1.png"),
-                          fit: BoxFit.cover)),
-                ),
-              ),
-            ),*/
             Align(
               alignment: Alignment.bottomCenter,
               child: InkWell(
