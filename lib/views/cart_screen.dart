@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
+  static const String routeName = '/cart-screen';
+
   const CartScreen({super.key});
 
   @override

@@ -2,10 +2,13 @@ import 'package:app_mania/utils/common_widgets.dart';
 import 'package:app_mania/utils/global_variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductDetails extends StatefulWidget {
   final String imgSrc;
-  const ProductDetails({super.key, required this.imgSrc});
+  static const String routeName = '/product-screen';
+
+  const ProductDetails({Key? key, required this.imgSrc}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _ProductDetails();
@@ -263,16 +266,18 @@ class _ProductDetails extends State<ProductDetails> {
                 alignment: Alignment.center,
                 margin: const EdgeInsets.only(top: 50),
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 50,
-                        color: Colors.lightGreen.shade400,
-                      ),
-                    ],
-                    image: const DecorationImage(
-                        image: AssetImage("assets/plate1.png"),
-                        fit: BoxFit.cover)),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 50,
+                      color: Colors.lightGreen.shade400,
+                    ),
+                  ],
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(widget.imgSrc),
+                  ),
+                ),
               ),
             ),
           ],

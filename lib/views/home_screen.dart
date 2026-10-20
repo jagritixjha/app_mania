@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String routeName = '/';
   const HomeScreen({super.key});
 
   @override
@@ -242,18 +243,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 10,
                 ), // scrollable buttons
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    foodCard(),
-                    foodCard(),
+                    FoodCard(
+                      context: context,
+                    ),
+                    FoodCard(
+                      context: context,
+                    ),
                   ],
                 ), // cards row 1
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    foodCard(),
-                    foodCard(),
+                    FoodCard(
+                      context: context,
+                    ),
+                    FoodCard(
+                      context: context,
+                    ),
                   ],
                 ), // cards row 2
               ],
@@ -265,25 +274,20 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class foodCard extends StatelessWidget {
-  const foodCard({
-    super.key,
-  });
+class FoodCard extends StatelessWidget {
+  // void Function()? onTap;
+  BuildContext context;
+  FoodCard({super.key, required this.context});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/second', arguments: "assets/plate1.png");
-        /*
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) =>
-                ProductDetails(imgSrc: "assets/plate1.png"),
-          ),
+        Navigator.pushNamed(
+          this.context,
+          '/second',
+          arguments: 'assets/plate1.png',
         );
-        */
       },
       child: Container(
         width: 164,

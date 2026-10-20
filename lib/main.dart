@@ -1,4 +1,9 @@
+// import 'package:app_mania/utils/routing.dart';
+// import 'package:app_mania/views/cart_screen.dart';
+// import 'package:app_mania/views/home_screen.dart';
+// import 'package:app_mania/views/product_details_screen.dart';
 import 'package:app_mania/utils/routing.dart';
+import 'package:app_mania/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,11 +23,11 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       onGenerateRoute: RoutingData.routeTo,
 
-      /*routes: {
-        "/": (context) => const HomeScreen(),
-        "/second": (context) => ProductDetails(imgSrc: "assets/plate1.png"),
-        "/third": (context) => const CartScreen(),
-      },*/
+      // routes: {
+      //   "/": (context) => const HomeScreen(),
+      //   "/second": (context) => ProductDetails(imgSrc: "assets/plate1.png"),
+      //   "/third": (context) => const CartScreen(),
+      // },
     );
   }
 }
